@@ -1,0 +1,1 @@
+cmd_/home/shantheri/container_project/OS-Jackfruit/boilerplate/monitor.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/shantheri/container_project/OS-Jackfruit/boilerplate/monitor.ko /home/shantheri/container_project/OS-Jackfruit/boilerplate/monitor.o /home/shantheri/container_project/OS-Jackfruit/boilerplate/monitor.mod.o;  true

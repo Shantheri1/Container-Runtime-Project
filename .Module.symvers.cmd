@@ -1,0 +1,1 @@
+cmd_/home/shantheri/container_project/OS-Jackfruit/boilerplate/Module.symvers := sed 's/\.ko$$/\.o/' /home/shantheri/container_project/OS-Jackfruit/boilerplate/modules.order | scripts/mod/modpost -m -a  -o /home/shantheri/container_project/OS-Jackfruit/boilerplate/Module.symvers -e -i Module.symvers   -T -

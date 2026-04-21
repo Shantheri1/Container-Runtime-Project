@@ -1,0 +1,1 @@
+cmd_/home/shantheri/container_project/OS-Jackfruit/boilerplate/monitor.mod := { echo  /home/shantheri/container_project/OS-Jackfruit/boilerplate/monitor.o;  echo; } > /home/shantheri/container_project/OS-Jackfruit/boilerplate/monitor.mod
