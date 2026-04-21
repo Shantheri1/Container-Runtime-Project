@@ -1,6 +1,6 @@
-# 🐳 Mini Container Runtime (OS Project)
+#  Mini Container Runtime (OS Project)
 
-## 📌 Overview
+## Overview
 
 This project implements a **basic container runtime** in C using core Linux concepts:
 
@@ -12,7 +12,7 @@ It simulates how tools like Docker manage containers at a low level.
 
 ---
 
-## ⚙️ Features
+##  Features
 
 * Create and manage containers using a custom `engine`
 * Memory limit enforcement (soft & hard limits)
@@ -26,7 +26,7 @@ It simulates how tools like Docker manage containers at a low level.
 
 ---
 
-## 🧱 Project Structure
+##  Project Structure
 
 ```
 boilerplate/
@@ -85,7 +85,7 @@ sudo ./engine logs alpha
 
 ---
 
-## 📊 Observations
+##  Observations
 
 * Lower nice value → higher CPU priority
 * Memory exceeding soft limit → warning (dmesg)
@@ -94,9 +94,9 @@ sudo ./engine logs alpha
 
 ---
 
-## 🧠 Key Concepts Used
+##  Key Concepts Used
 
-* `fork()`, `exec()`, `wait()`
+* `clone()`, `exec()`, `wait()`
 * `chroot()` for filesystem isolation
 * `ioctl()` for user-kernel communication
 * Linux scheduling (`nice`)
