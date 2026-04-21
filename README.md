@@ -77,13 +77,55 @@ sudo ./engine start beta ../rootfs-beta /cpu_hog --nice 10
 sudo ./engine ps
 ```
 
-### 6. View logs
-
+**View logs:**
 ```bash
 sudo ./engine logs alpha
+sudo ./engine logs beta
 ```
 
----
+**Stop containers:**
+```bash
+sudo ./engine stop alpha
+sudo ./engine stop beta
+```
+
+### Step 7: Run memory test workload
+```bash
+gcc -static -o memory_hog memory_hog.c
+sudo cp memory_hog ./rootfs-alpha/
+sudo cp memory_hog ./rootfs-beta/
+
+sudo ./engine start alpha ./rootfs-alpha /memory_hog --soft-mib 10 --hard-mib 30
+sudo ./engine start beta ./rootfs-beta /memory_hog --soft-mib 10 --hard-mib 30
+```
+
+### Step 8: Run scheduling experiment
+```bash
+gcc -static -o cpu_hog cpu_hog.c
+sudo cp cpu_hog ./rootfs-alpha/
+sudo cp cpu_hog ./rootfs-beta/
+
+sudo ./engine start alpha ./rootfs-alpha /cpu_hog --nice -5
+sudo ./engine start beta ./rootfs-beta /cpu_hog --nice 10
+
+sleep 3
+ps -eo pid,ni,%cpu,comm | grep cpu_hog
+```
+
+### Step 9: Check kernel logs
+```bash
+sudo dmesg | grep container_monitor
+```
+
+### Step 10: Cleanup
+```bash
+sudo ./engine stop alpha
+sudo ./engine stop beta
+ps aux | grep defunct
+sudo rmmod monitor
+sudo dmesg | tail -5
+```
+
 
 ##  Observations
 
