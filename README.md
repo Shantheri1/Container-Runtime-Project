@@ -146,7 +146,7 @@ sudo dmesg | tail -5
 
 ![Multi-container supervision output](https://github.com/user-attachments/assets/a47348eb-7c30-4388-a334-14fa80db9cc5)
 
-**Caption:** Multiple containers (`alpha`, `beta`) managed simultaneously by a single supervisor process. This demonstrates concurrent container execution and supervision.
+ Multiple containers (`alpha`, `beta`) managed simultaneously by a single supervisor process. This demonstrates concurrent container execution and supervision.
 
 ---
 
@@ -154,7 +154,7 @@ sudo dmesg | tail -5
 
 ![Metadata tracking output](https://github.com/user-attachments/assets/d9d2fa27-2ed3-41ce-ac53-ff6510fa8250)
 
-**Caption:** Output of `engine ps` showing container ID, PID, state (running/exited), and lifecycle information, confirming proper metadata management.
+ Output of `engine ps` showing container ID, PID, state (running/exited), and lifecycle information, confirming proper metadata management.
 
 ---
 
@@ -164,7 +164,7 @@ sudo dmesg | tail -5
 
 ![Logs from beta container](https://github.com/user-attachments/assets/853ab99e-d0e8-4ea6-9fbe-78ab25c7623e)
 
-**Caption:** Logs from containers `alpha` and `beta` captured via pipe-based IPC and stored independently. This demonstrates the bounded-buffer producer–consumer logging mechanism.
+ Logs from containers `alpha` and `beta` captured via pipe-based IPC and stored independently. This demonstrates the bounded-buffer producer–consumer logging mechanism.
 
 ---
 
@@ -172,7 +172,7 @@ sudo dmesg | tail -5
 
 ![Supervisor CLI and IPC](https://github.com/user-attachments/assets/150faf18-652f-46d1-98fd-aef8484f6b1e)
 
-**Caption:** Interaction between CLI and supervisor showing container lifecycle commands (`start`, `stop`). Demonstrates IPC-based communication.
+ Interaction between CLI and supervisor showing container lifecycle commands (`start`, `stop`). Demonstrates IPC-based communication.
 
 ---
 
@@ -180,7 +180,7 @@ sudo dmesg | tail -5
 
 ![Soft memory limit warning](https://github.com/user-attachments/assets/2bf3a7bc-309a-4c06-86c5-17e7b6a57e99)
 
-**Caption:** Kernel logs showing soft memory limit exceeded. The process continues execution but a warning is generated.
+ Kernel logs showing soft memory limit exceeded. The process continues execution but a warning is generated.
 
 ---
 
@@ -188,7 +188,7 @@ sudo dmesg | tail -5
 
 ![Hard memory limit enforcement](https://github.com/user-attachments/assets/150168a9-78a3-4fa5-8018-a582377fdf60)
 
-**Caption:** Kernel logs showing enforcement of hard memory limits where the container process is terminated after exceeding allowed memory.
+ Kernel logs showing enforcement of hard memory limits where the container process is terminated after exceeding allowed memory.
 
 ---
 
@@ -196,7 +196,7 @@ sudo dmesg | tail -5
 
 ![CPU scheduling experiment output](https://github.com/user-attachments/assets/58b5e7db-0525-4b1b-bbc8-20036eb264cf)
 
-**Caption:** CPU scheduling behavior using different `nice` values. Lower nice value results in higher CPU priority, validating Linux scheduler behavior.
+ CPU scheduling behavior using different `nice` values. Lower nice value results in higher CPU priority, validating Linux scheduler behavior.
 
 ---
 
@@ -204,7 +204,7 @@ sudo dmesg | tail -5
 
 ![Cleanup and no zombie processes](https://github.com/user-attachments/assets/087d100e-22c8-40fa-a019-d59d5f4212d7)
 
-**Caption:** After stopping containers, no `<defunct>` (zombie) processes are present. Confirms proper resource cleanup and child process reaping.
+ After stopping containers, no `<defunct>` (zombie) processes are present. Confirms proper resource cleanup and child process reaping.
 
 ---
 
