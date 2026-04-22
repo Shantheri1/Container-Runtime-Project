@@ -234,4 +234,8 @@ sudo dmesg | tail -5
 * Kernel module must be loaded before using supervisor
 * Avoid committing binaries and logs
 
+ ##Authors
+ Shriranjini[PES1UG24CS447]
+ Shantheri Shenoy[PES1UG24CS428]
+
 
