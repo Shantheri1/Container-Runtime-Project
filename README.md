@@ -228,7 +228,7 @@ sudo dmesg | tail -5
 
 ---
 
-## ⚠️ Notes
+## Notes
 
 * Run commands with `sudo` where required
 * Kernel module must be loaded before using supervisor
